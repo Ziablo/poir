@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "tournaments": "Tournois",
+    "streams": "Streams"
+  },
+  "language": {
+    "fr": "Français",
+    "en": "English"
+  }
+} 

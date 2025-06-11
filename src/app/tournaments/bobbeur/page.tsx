@@ -61,7 +61,7 @@ export default function BobbeurTournament() {
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>Groupes A et B s'affrontent en format 1v1v1v1.</li>
                 <li>Sur des petites maps donc game rapide.</li>
-                <li>Les 2 premiers de chaque game accèdent à la phase finale pour gagner le cashprize 💰.</li>
+                <li>Les 2 premiers de chaque game accèdent à la phase finale.</li>
                 <li>Les autres joueront pour les dernières places du classement.</li>
               </ul>
             </div>

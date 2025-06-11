@@ -59,7 +59,6 @@ const TournamentDetails = () => {
                tournament.status === 'live' ? 'En cours' : 'Terminé'}
             </span>
             <span>{tournament.date}</span>
-            <span>{tournament.prizePool}€</span>
           </div>
         </motion.div>
 
@@ -207,7 +206,7 @@ const TournamentDetails = () => {
                       <ul className="list-disc list-inside space-y-2 text-gray-300">
                         <li>Groupes A et B s'affrontent en format 1v1v1v1</li>
                         <li>Sur des petites maps donc game rapide</li>
-                        <li>Les 2 premiers de chaque game accèdent à la phase finale pour gagner le cashprize 💰</li>
+                        <li>Les 2 premiers de chaque game accèdent à la phase finale</li>
                         <li>Les autres joueront pour les dernières places du classement</li>
                       </ul>
                     </div>
@@ -298,27 +297,6 @@ const TournamentDetails = () => {
           >
             {isBobbeurTournament ? (
               <>
-                <section className="card p-6">
-                  <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                    <ClockIcon className="w-6 h-6 text-accent" />
-                    Planning
-                  </h2>
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-gray-400 mb-1">Date</h3>
-                      <p>25 Février 2024</p>
-                    </div>
-                    <div>
-                      <h3 className="text-gray-400 mb-1">Heure de début</h3>
-                      <p>14h00</p>
-                    </div>
-                    <div>
-                      <h3 className="text-gray-400 mb-1">Durée estimée</h3>
-                      <p>4-5 heures</p>
-                    </div>
-                  </div>
-                </section>
-
                 <section className="card p-6">
                   <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                     <MapIcon className="w-6 h-6 text-accent" />

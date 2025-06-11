@@ -10,6 +10,14 @@ import ScrollReveal from '@/components/ScrollReveal';
 import { demoTournaments } from '@/data/demo';
 
 export default function Home() {
+  // Calculer le nombre total de participants
+  const totalParticipants = demoTournaments.reduce((total, tournament) => 
+    total + tournament.participants.length, 0
+  );
+
+  // Calculer le nombre de tournois en cours
+  const activeTournaments = demoTournaments.filter(t => t.status === 'live').length;
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -33,20 +41,16 @@ export default function Home() {
 
         <ScrollReveal delay={0.2}>
           <AnimatedCard className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-accent mb-2">12</h3>
-                <p className="text-gray-300">Tournois actifs</p>
+                <h3 className="text-3xl font-bold text-accent mb-2">{activeTournaments}</h3>
+                <p className="text-gray-300">Tournoi{activeTournaments > 1 ? 's' : ''} en cours</p>
               </div>
               <div className="text-center">
-                <h3 className="text-3xl font-bold text-accent mb-2">500+</h3>
-                <p className="text-gray-300">Joueurs inscrits</p>
+                <h3 className="text-3xl font-bold text-accent mb-2">{totalParticipants}</h3>
+                <p className="text-gray-300">Joueur{totalParticipants > 1 ? 's' : ''} inscrit{totalParticipants > 1 ? 's' : ''}</p>
               </div>
-              <div className="text-center">
-                <h3 className="text-3xl font-bold text-accent mb-2">50k€</h3>
-                <p className="text-gray-300">Prix distribués</p>
-              </div>
-            </div>
+        </div>
           </AnimatedCard>
         </ScrollReveal>
 
@@ -67,7 +71,7 @@ export default function Home() {
             <TwitchStreams />
           </section>
         </ScrollReveal>
-      </div>
+    </div>
     </motion.div>
   );
 }

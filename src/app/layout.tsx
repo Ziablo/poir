@@ -18,15 +18,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} min-h-screen bg-gradient-to-b from-[rgb(26,26,26)] to-[rgb(45,45,45)]`}>
+    <html lang="fr">
+      <body className={`${inter.className} min-h-screen bg-[#1a1a1a] relative`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-screen">
+          <div className="fixed inset-0 bg-[#1a1a1a] -z-10" />
+          <div className="flex flex-col min-h-screen relative z-10">
             <Navbar />
             <main className="flex-1">
               {children}

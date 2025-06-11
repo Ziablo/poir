@@ -25,15 +25,14 @@ export interface Tournament {
   name: string;
   description: string;
   status: TournamentStatus;
-  prizePool: number | string;
   date: string;
   format: string;
   rules: string[];
-  participants: Participant[];
   judges: string[];
+  participants: { name: string; points?: number }[];
   startDate: string;
   endDate: string;
   maxParticipants: number;
-  matches: Match[];
-  leaderboard: Player[];
+  matches: any[];
+  leaderboard: any[];
 } 

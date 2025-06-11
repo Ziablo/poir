@@ -39,14 +39,13 @@ const TournamentCard = ({ tournament, delay = 0 }: TournamentCardProps) => {
             <div className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                  tournament.status === 'upcoming' ? 'bg-blue-500/10 text-blue-500' :
-                  tournament.status === 'live' ? 'bg-green-500/10 text-green-500' :
-                  'bg-gray-500/10 text-gray-500'
+                  tournament.status === 'upcoming' ? 'bg-yellow-500/20 text-yellow-500' :
+                  tournament.status === 'live' ? 'bg-green-500/20 text-green-500' :
+                  'bg-gray-500/20 text-gray-500'
                 }`}>
                   {tournament.status === 'upcoming' ? 'À venir' :
                    tournament.status === 'live' ? 'En cours' : 'Terminé'}
                 </span>
-                <span className="text-accent font-bold">{tournament.prizePool}€</span>
               </div>
 
               <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
@@ -61,7 +60,9 @@ const TournamentCard = ({ tournament, delay = 0 }: TournamentCardProps) => {
                 <div className="flex items-center gap-2">
                   <span>{tournament.participants.length} participants</span>
                 </div>
-                <span>{tournament.date}</span>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-gray-400">{tournament.date}</span>
+                </div>
               </div>
             </div>
           </div>
