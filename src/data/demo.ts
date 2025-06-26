@@ -44,26 +44,68 @@ export const demoTournaments: Tournament[] = [
   {
     id: '5',
     name: 'The Akumas',
-    description: 'Les Esprits des Akumas vous appellent. Ressentez la puissance de la bataille, les flammes du défi, et laissez l\'esprit des démons vous guider. Qui deviendra le Premier Akuma d\'OpenFront ? Affrontez les meilleurs dans un tournoi où chaque victoire vous rapproche de la gloire. Tournoi à élimination directe, une seule équipe vainqueur. Le titre Akuma d\'OpenFront ne sera réservé qu\'à ceux qui auront survécu aux épreuves et marqué l\'histoire.',
+    description: `Les Esprits des Akumas vous appellent. Ressentez la puissance de la bataille, les flammes du défi, et laissez l'esprit des démons vous guider.\n\nNOUVEAU : Le tournoi passe en 3v3 avec 3 remplaçants max ! Plusieurs teams se sont plaintes qu'il fallait trop de joueurs, donc le format change.\n\nÀ toutes les Teams et Petites Teams, vous pouvez vous inscrire et devenir la meilleure team OpenFront au monde.\n\nQui deviendra le Premier Akuma d'OpenFront ? Affrontez les meilleurs dans un tournoi où chaque victoire vous rapproche de la gloire. Tournoi à élimination directe, une seule équipe vainqueur. Le titre Akuma d'OpenFront ne sera réservé qu'à ceux qui auront survécu aux épreuves et marqué l'histoire.\n\nSpectateurs, préparez-vous à assister à un combat légendaire ! Vibrez avec chaque affrontement, chaque victoire, chaque défaite. Les plus grands joueurs s'affronteront sous vos yeux pour régner sur le monde des ténèbres d'OpenFront.\n\nÊtes-vous prêt à entrer dans l'arène ? :heart_on_fire:`,
     status: 'upcoming',
     date: 'À venir',
-    format: 'Élimination directe',
+    format: '3v3 (avec 3 remplaçants max)',
     rules: [
-      'Format élimination directe',
+      'Format 3v3',
+      '3 remplaçants maximum par équipe',
+      'Élimination directe',
       'Une seule équipe vainqueur',
       'Respect des adversaires',
       'Pas de triche'
     ],
     judges: ['Admin1', 'Admin2', 'Admin3'],
     participants: [
-      { name: 'Team1', points: 0 },
-      { name: 'Team2', points: 0 },
-      { name: 'Team3', points: 0 },
-      { name: 'Team4', points: 0 },
-      { name: 'Team5', points: 0 },
-      { name: 'Team6', points: 0 },
-      { name: 'Team7', points: 0 },
-      { name: 'Team8', points: 0 }
+      {
+        name: 'BURG',
+        players: ['[BURG] Optimus', '[BURG] Norbi', '[BURG] Exod_Omega'],
+        nationality: 'United States',
+        points: 0
+      },
+      {
+        name: 'CYN',
+        players: ['[CYN] Kaizeron', '[CYN] Keini', '[CYN] Baumi', '[CYN] Sweeper', '[CYN] Zilka'],
+        nationality: 'Germany',
+        points: 0
+      },
+      {
+        name: 'UWU',
+        players: ['[UWU] random_researchist', '[UWU] CeCe23', '[UWU] DelUwU Land | Erin Arya', '[UWU] AnGun', '[UWU] conclusio'],
+        nationality: 'International',
+        points: 0
+      },
+      {
+        name: 'PL',
+        players: ['[PL] Maths Empire', '[PL] Zibi', '[PL] Kryno', '[PL] crabtify', '[PL] Falkland', '[PL] Secret philospher'],
+        nationality: 'Polish',
+        points: 0
+      },
+      {
+        name: 'GRAF',
+        players: ['[GRAF] derGraf', '[GRAF] Metagamer', '[GRAF] papagraf', '[GRAF] vanon', '[GRAF] shutcapybara', '[GRAF] swam'],
+        nationality: 'Germany',
+        points: 0
+      },
+      {
+        name: 'BOB',
+        players: ['[BOB] SNG', '[BOB] Ale', '[BOB] Groot', '[BOB] THe BOBBEUR Twitch'],
+        nationality: 'Belgium',
+        points: 0
+      },
+      {
+        name: 'LBU',
+        players: ['[LBU] Bobo', '[LBU] Deckone', '[LBU] Nwy07', '[LBU] Underall', '[LBU] Baptista54', '[LBU] Lucachuuu'],
+        nationality: 'French',
+        points: 0
+      },
+      {
+        name: 'EU',
+        players: ['[EU] wExoqtic', '[EU] Youyoufz', '[EU] Carioca', '[EU] Cutgoose'],
+        nationality: 'European',
+        points: 0
+      }
     ],
     startDate: '2024-04-01',
     endDate: '2024-04-01',

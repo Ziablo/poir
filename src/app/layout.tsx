@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'OpenFront Tournaments',
   description: 'La plateforme officielle des tournois OpenFront',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

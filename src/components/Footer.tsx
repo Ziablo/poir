@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-gray-400">
-            © 2024 OpenFront. Tous droits réservés.
+            © 2025 OpenFront. Tous droits réservés.
           </div>
           <div className="flex gap-4">
             <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">

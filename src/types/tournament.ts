@@ -3,6 +3,8 @@ export type TournamentStatus = 'upcoming' | 'live' | 'completed';
 export interface Participant {
   name: string;
   points?: number;
+  players?: string[];
+  nationality?: string;
 }
 
 export interface Match {

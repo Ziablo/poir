@@ -100,19 +100,41 @@ const TournamentCard = ({ tournament, delay = 0 }: TournamentCardProps) => {
               ) : (
                 <div className="space-y-4">
                   {top3.map((participant, index) => (
-                    <div key={index} className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
-                      <div className="flex items-center gap-3">
-                        <span className={`text-lg font-bold ${
-                          index === 0 ? 'text-yellow-500' :
-                          index === 1 ? 'text-gray-400' :
-                          'text-amber-700'
-                        }`}>
-                          #{index + 1}
-                        </span>
-                        <span>{participant.name}</span>
+                    tournament.id === '5' ? (
+                      <Link 
+                        key={index}
+                        href={`/teams/${participant.name}`}
+                        className="block"
+                      >
+                        <div className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg hover:bg-green-500/20 hover:border-green-500/50 border border-transparent transition-all duration-300 cursor-pointer group">
+                          <div className="flex items-center gap-3">
+                            <span className={`text-lg font-bold ${
+                              index === 0 ? 'text-yellow-500' :
+                              index === 1 ? 'text-gray-400' :
+                              'text-amber-700'
+                            } group-hover:text-green-400 transition-colors`}>
+                              #{index + 1}
+                            </span>
+                            <span className="group-hover:text-green-300 transition-colors font-medium">{participant.name}</span>
+                          </div>
+                          <span className="text-accent font-semibold group-hover:text-green-400 transition-colors">{participant.points || 0} pts</span>
+                        </div>
+                      </Link>
+                    ) : (
+                      <div key={index} className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                        <div className="flex items-center gap-3">
+                          <span className={`text-lg font-bold ${
+                            index === 0 ? 'text-yellow-500' :
+                            index === 1 ? 'text-gray-400' :
+                            'text-amber-700'
+                          }`}>
+                            #{index + 1}
+                          </span>
+                          <span>{participant.name}</span>
+                        </div>
+                        <span className="text-accent font-semibold">{participant.points || 0} pts</span>
                       </div>
-                      <span className="text-accent font-semibold">{participant.points || 0} pts</span>
-                    </div>
+                    )
                   ))}
                 </div>
               )}
