@@ -11,7 +11,13 @@ export const metadata: Metadata = {
   title: 'OpenFront Tournaments',
   description: 'La plateforme officielle des tournois OpenFront',
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/icon.png',
   },
 }
 
