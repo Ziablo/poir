@@ -31,7 +31,7 @@ export interface Tournament {
   format: string;
   rules: string[];
   judges: string[];
-  participants: { name: string; points?: number }[];
+  participants: Participant[];
   startDate: string;
   endDate: string;
   maxParticipants: number;
