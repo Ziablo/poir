@@ -12,12 +12,9 @@ const Footer = () => {
             © 2025 OpenFront. Tous droits réservés.
           </div>
           <div className="flex gap-4">
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-              Conditions d'utilisation
-            </a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-              Politique de confidentialité
-            </a>
+            <Link href="/terms" className="text-sm text-gray-400 hover:text-accent transition-colors">
+              Termes et Conditions
+            </Link>
           </div>
         </div>
       </div>
